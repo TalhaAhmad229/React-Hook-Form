@@ -1,0 +1,32 @@
+{
+  "formData": {
+    "contractDetails": {
+      "specialConsiderations": "Officia aut illo sed",
+      "schedule": {
+        "paymentSchedule": "10"
+      },
+      "payRate": {
+        "hoursPerWeak": 75,
+        "cadence": "Aut doloribus sunt i",
+        "currency": "Fugiat exercitatione"
+      },
+      "location": {
+        "address": "Eum magna quo evenie",
+        "province": "10",
+        "country": "10"
+      },
+      "date": {
+        "endDate": "Fri, 30 Jun 2023 10:34:21 GMT",
+        "startDate": "Thu, 29 Jun 2023 10:34:19 GMT"
+      }
+    },
+    "consultantDetails": {
+      "language": "10",
+      "legalLastName": "Logan",
+      "legalFirstName": "Carissa"
+    },
+    "clientDetails": {
+      "clientName": "Christopher Molina"
+    }
+  }
+}

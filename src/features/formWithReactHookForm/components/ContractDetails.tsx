@@ -1,0 +1,84 @@
+import FormInputSelector from '../../../components/FormInputSelector';
+import FormInputText from '../../../components/FormInputText';
+import FormInputDatePicker from '../../../components/FormInputDatePicker';
+import FormHeader from './FormHeader';
+
+import { Accordion, Grid, FormWrapper } from '../../../components/Layout';
+import {
+  ADDRESS,
+  CADENCE,
+  COUNTRY,
+  CURRENCY,
+  END_DATE,
+  HOURS_PER_WEEK,
+  PAYMENT_SCHEDULE,
+  PROVINCE,
+  SPECIAL_CONSIDERATIONS,
+  START_DATE,
+} from '../../../constant';
+
+const ContractDetails = () => {
+  return (
+    <Accordion header={<FormHeader heading="Contract Details" />}>
+      <FormWrapper heading="Dates">
+        <Grid container spacing={4}>
+          <Grid item lg={6} md={12}>
+            <FormInputDatePicker name={START_DATE} label="Start Date" />
+          </Grid>
+          <Grid item lg={6} md={12}>
+            <FormInputDatePicker name={END_DATE} label="End Date" />
+          </Grid>
+        </Grid>
+      </FormWrapper>
+      <FormWrapper heading="Work Locations">
+        <Grid container spacing={4}>
+          <Grid item lg={6} md={12}>
+            <FormInputSelector name={COUNTRY} label="Country *" />
+          </Grid>
+          <Grid item lg={6} md={12}>
+            <FormInputSelector name={PROVINCE} label="Province/ State *" />
+          </Grid>
+          <Grid item lg={12} md={12}>
+            <FormInputText name={ADDRESS} label="Address *" />
+          </Grid>
+        </Grid>
+      </FormWrapper>
+      <FormWrapper heading="Pay Rate">
+        <Grid container spacing={4}>
+          <Grid item lg={6} md={12}>
+            <FormInputText name={CURRENCY} label="Currency*" />
+          </Grid>
+          <Grid item lg={6} md={12}>
+            <FormInputText name={CADENCE} label="Cadence*" />
+          </Grid>
+          <Grid item lg={6} md={12}>
+            <FormInputText
+              name={HOURS_PER_WEEK}
+              label="Hours per Week*"
+              type="number"
+            />
+          </Grid>
+        </Grid>
+      </FormWrapper>
+      <FormWrapper heading="Schedule">
+        <Grid container spacing={4}>
+          <Grid item lg={12} md={12}>
+            <FormInputSelector
+              name={PAYMENT_SCHEDULE}
+              label="Payment Schedule*"
+            />
+          </Grid>
+        </Grid>
+      </FormWrapper>
+      <FormWrapper heading="Special Considerations">
+        <Grid container spacing={4}>
+          <Grid item lg={12} md={12}>
+            <FormInputText name={SPECIAL_CONSIDERATIONS} label="" />
+          </Grid>
+        </Grid>
+      </FormWrapper>
+    </Accordion>
+  );
+};
+
+export default ContractDetails;
