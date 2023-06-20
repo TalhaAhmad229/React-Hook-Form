@@ -1,11 +1,8 @@
 import { IFormControllerTypes } from 'src/types';
 import { Controller, useFormContext } from 'src/lib/react-hook-form';
-import { DatePicker, Select } from './Layout';
+import { DatePicker } from './Layout';
 
-const FormInputDatePicker = ({
-  name,
-  label,
-}: Omit<IFormControllerTypes, 'required'>) => {
+const FormInputDatePicker = ({ name }: IFormControllerTypes) => {
   const { control } = useFormContext();
   return (
     <Controller

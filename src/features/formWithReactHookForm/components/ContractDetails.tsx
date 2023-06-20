@@ -33,34 +33,29 @@ const ContractDetails = () => {
       <FormWrapper heading="Work Locations">
         <Grid container spacing={4}>
           <Grid item lg={6} md={12}>
-            <FormInputSelector name={COUNTRY} label="Country" required={true} />
+            <FormInputSelector name={COUNTRY} label="Country" />
           </Grid>
           <Grid item lg={6} md={12}>
-            <FormInputSelector
-              name={PROVINCE}
-              label="Province/ State"
-              required={true}
-            />
+            <FormInputSelector name={PROVINCE} label="Province/ State" />
           </Grid>
           <Grid item lg={12} md={12}>
-            <FormInputText name={ADDRESS} label="Address" required={true} />
+            <FormInputText name={ADDRESS} label="Address" />
           </Grid>
         </Grid>
       </FormWrapper>
       <FormWrapper heading="Pay Rate">
         <Grid container spacing={4}>
           <Grid item lg={6} md={12}>
-            <FormInputText name={CURRENCY} label="Currency" required={true} />
+            <FormInputText name={CURRENCY} label="Currency" />
           </Grid>
           <Grid item lg={6} md={12}>
-            <FormInputText name={CADENCE} label="Cadence" required={true} />
+            <FormInputText name={CADENCE} label="Cadence" />
           </Grid>
           <Grid item lg={6} md={12}>
             <FormInputText
               name={HOURS_PER_WEEK}
               label="Hours per Week"
               type="number"
-              required={true}
             />
           </Grid>
         </Grid>
@@ -71,7 +66,6 @@ const ContractDetails = () => {
             <FormInputSelector
               name={PAYMENT_SCHEDULE}
               label="Payment Schedule"
-              required={true}
             />
           </Grid>
         </Grid>

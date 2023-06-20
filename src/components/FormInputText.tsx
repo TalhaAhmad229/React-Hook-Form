@@ -9,7 +9,7 @@ const FormInputText = ({
   name,
   label,
   type = 'text',
-  required,
+  required = true,
 }: FormInputTextProps) => {
   const { control } = useFormContext();
   return (

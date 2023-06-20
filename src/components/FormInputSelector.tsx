@@ -2,7 +2,11 @@ import { IFormControllerTypes } from 'src/types';
 import { Controller, useFormContext } from 'src/lib/react-hook-form';
 import { Select } from './Layout';
 
-const FormInputSelector = ({ name, label, required }: IFormControllerTypes) => {
+const FormInputSelector = ({
+  name,
+  label,
+  required = true,
+}: IFormControllerTypes) => {
   const { control } = useFormContext();
   return (
     <Controller
