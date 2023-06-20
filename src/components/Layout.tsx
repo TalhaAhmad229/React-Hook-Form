@@ -78,6 +78,7 @@ export function DatePicker({
 type SelectorProps = SelectProps & {
   error: boolean;
   helperText?: string;
+  required: boolean;
 };
 
 export function Select({
@@ -86,9 +87,10 @@ export function Select({
   helperText,
   onChange,
   value,
+  required,
 }: SelectorProps) {
   return (
-    <FormControl fullWidth error={error}>
+    <FormControl fullWidth error={error} required={required}>
       <InputLabel id="demo-simple-select-label">{label}</InputLabel>
       <BSelect
         labelId="demo-simple-select-label"

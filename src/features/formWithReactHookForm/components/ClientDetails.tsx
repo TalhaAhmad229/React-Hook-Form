@@ -1,8 +1,8 @@
-import FormInputText from '../../../components/FormInputText';
+import FormInputText from 'src/components/FormInputText';
 import FormHeader from './FormHeader';
 
-import { Accordion, Box, FormWrapper, Grid } from '../../../components/Layout';
-import { CLIENT_NAME } from '../../../constant';
+import { Accordion, Box, FormWrapper, Grid } from 'src/components/Layout';
+import { CLIENT_NAME } from 'src/constant';
 
 const ClientDetails = () => {
   return (
@@ -10,7 +10,11 @@ const ClientDetails = () => {
       <FormWrapper heading="">
         <Grid container spacing={4}>
           <Grid item lg={12}>
-            <FormInputText name={CLIENT_NAME} label="Client Name *" />
+            <FormInputText
+              name={CLIENT_NAME}
+              label="Client Name"
+              required={true}
+            />
           </Grid>
         </Grid>
       </FormWrapper>

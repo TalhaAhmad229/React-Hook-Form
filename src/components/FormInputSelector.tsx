@@ -1,8 +1,8 @@
-import { IFormControllerTypes } from '../types';
-import { Controller, useFormContext } from '../lib/react-hook-form';
+import { IFormControllerTypes } from 'src/types';
+import { Controller, useFormContext } from 'src/lib/react-hook-form';
 import { Select } from './Layout';
 
-const FormInputSelector = ({ name, label }: IFormControllerTypes) => {
+const FormInputSelector = ({ name, label, required }: IFormControllerTypes) => {
   const { control } = useFormContext();
   return (
     <Controller
@@ -15,6 +15,7 @@ const FormInputSelector = ({ name, label }: IFormControllerTypes) => {
           label={label}
           error={!!error}
           helperText={error && error?.message}
+          required={required}
         />
       )}
     />

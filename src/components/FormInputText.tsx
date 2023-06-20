@@ -1,11 +1,16 @@
-import { IFormControllerTypes } from '../types';
-import { Controller, useFormContext } from '../lib/react-hook-form';
+import { IFormControllerTypes } from 'src/types';
+import { Controller, useFormContext } from 'src/lib/react-hook-form';
 import { TextField } from './Layout';
 
 type FormInputTextProps = IFormControllerTypes & {
   type?: 'text' | 'number' | 'date';
 };
-const FormInputText = ({ name, label, type = 'text' }: FormInputTextProps) => {
+const FormInputText = ({
+  name,
+  label,
+  type = 'text',
+  required,
+}: FormInputTextProps) => {
   const { control } = useFormContext();
   return (
     <Controller
@@ -20,6 +25,7 @@ const FormInputText = ({ name, label, type = 'text' }: FormInputTextProps) => {
           label={label}
           error={!!error}
           helperText={error ? error.message : null}
+          required={required}
         />
       )}
     />

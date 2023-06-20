@@ -1,5 +1,5 @@
-import { Box, Typography } from '../../../components/Layout';
-import { CheckCircleOutlineIcon } from '../../../lib/icons-material';
+import { Box, Typography } from 'src/components/Layout';
+import { CheckCircleOutlineIcon } from 'src/lib/icons-material';
 
 type FormHeaderProps = {
   heading: string;
