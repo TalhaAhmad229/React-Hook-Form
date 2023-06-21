@@ -1,4 +1,5 @@
-import { IFormControllerTypes } from 'src/types';
+
+import { IFormControllerTypes } from 'src/features/formWithReactHookForm/types';
 import { Controller, useFormContext } from 'src/lib/react-hook-form';
 import { TextField } from './Layout';
 
