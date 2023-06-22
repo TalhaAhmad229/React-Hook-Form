@@ -1,7 +1,7 @@
-import axios from '../../../lib/axios';
-import { FORMDATA } from '../../../constant';
+import axios from 'src/lib/axios';
+import { FORMDATA } from 'src/constant';
 import { IFormTypes } from '../types/index';
-import { IApiResponse } from '../../../types';
+import { IApiResponse } from 'src/types';
 import { AxiosError, AxiosResponse } from 'axios';
 
 export const PostFormData = async (

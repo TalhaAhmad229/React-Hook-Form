@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-import { BASE_URL } from '../constant';
+import { BASE_URL } from 'src/constant';
 
 const axios = Axios.create({
   baseURL: BASE_URL,
